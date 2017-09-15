@@ -3,7 +3,7 @@ yar - Yet Another Router for React Native
 
 (c) 2017 Gatlin Johnson <gatlin@niltag.net>
 
-0. Synopsis
+Synopsis
 ---
 
 ```jsx
@@ -38,7 +38,6 @@ export default class App extends React.Component {
               <Router>
                 <Route
                   component={Main}
-                  path={'main'}
                   props={{ someProp: 'foo' }}
                   initial />
                 <Route path={'subroute'}>
@@ -68,7 +67,9 @@ export class Main extends React.Component {
                     onClick={() => this.props.routing.push('/other/view-a')} />
                 <Button
                     title='Go to View B'
-                    onClick={() => this.props.routing.push('/other/view-b')} />
+                    onClick={() => this.props.routing.push('/other/view-b', {
+                        reallyImportantProp: false
+                    })} />
             </View>
         );
     }
@@ -91,13 +92,31 @@ export class OtherComponentA extends React.Component {
 }
 ```
 
-1. Why another router?
+Features
+---
+
+- Routing actions: `pop`, `push`, and `popAndPush`. The latter two take a path
+  and an optional property object that will be merged in.
+- Declarative routing.
+- Components aren't instantiated until needed.
+- Components don't need to know anything about the router. Routing actions are
+  added under the key `routing`.
+
+TODO
+---
+
+- Redux integration should be 1) optional and 2) done via middleware.
+- Animated transitions
+- Some means of basic layout management.
+- *sigh* Tests, as always.
+
+Why Another Router?
 ---
 
 Honestly? My own edification. I wanted to see why other routers I've tried are
 slow and also get to know more about how React and React Native work.
 
-2. Questions / Comments / Bugs / Vast Wealth You Want To Give Me
+Questions / Comments / Bugs / Vast Wealth You Want To Give Me
 ---
 
 You can reach me at <gatlin@niltag.net> or use the GitHub Issues feature.
