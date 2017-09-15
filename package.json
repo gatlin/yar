@@ -2,7 +2,7 @@
   "name": "yar",
   "version": "0.1.0",
   "description": "Yet Another Router for React",
-  "main": "dist/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/gatlin/yar"
