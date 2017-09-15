@@ -1,5 +1,4 @@
-import { Router } from './src/components/Router';
-import { Route } from './src/components/Route';
+import { Router, Route} from './src/components';
 import * as actions from './src/actions';
 import { routerReducer } from './src/reducers';
 
