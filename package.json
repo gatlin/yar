@@ -1,0 +1,21 @@
+{
+  "name": "yar",
+  "version": "0.1.0",
+  "description": "Yet Another Router for React",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatlin/yar"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gatlin Johnson <gatlin@niltag.net>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "react": "^15.6.1",
+    "react-native": "^0.48.3",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  }
+}
