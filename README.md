@@ -40,7 +40,7 @@ export default class App extends React.Component {
                   component={Main}
                   props={{ someProp: 'foo' }}
                   initial />
-                <Route path={'subroute'}>
+                <Route path={'other'}>
                   <Route
                     component={OtherComponentA}
                     path={'view-a'} />>
